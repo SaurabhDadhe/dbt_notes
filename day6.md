@@ -3,6 +3,7 @@
 select dname, ename from emp, dept
 where dept.deptno = emp. deptno
 and dname = 'TRN';
+
 DNAME 		ENAME
 TRN 		Arun
 TRN		Ali
@@ -11,7 +12,8 @@ TRN		Ali
 2. Inequijoin
 select dname, ename from emp, dept
 where dept.deptno != emp.deptno
-and dname - - 'TRN'•,
+and dname = 'TRN'•,
+
 DNAPIE 		ENAME
 TRN 		Jack
 TRN		Thomas
@@ -28,6 +30,7 @@ non-matching	rows of	"Outer" table
 	a. master-Detail Report (Parent-Child Report)
 select dname, ename from emp, dept
 where dept.deptno = emp.deptno (+) ;
+
 DNAME 		ENAME
 TRN 		Arun
 TRN 		Ali
@@ -47,7 +50,7 @@ TRN	 	Ali
 TRN 		Kirun
 EXP 		Jack
 EXP 		Thomas
-			Scott
+		Scott
 
 ---------------------------
 a. Half Outerjoin
