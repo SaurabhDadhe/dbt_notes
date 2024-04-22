@@ -140,6 +140,29 @@ join	without a WHERE clause
 every row of driving table is combined with each and every row of
 driven table
 cross product of 2 tables and therefore it's also known as Cross
-boin
+boin!
+
 select dname,	ename from emp, dept;
+
+-----------------------------------------------------------------------------------------------------------
+
+
+![Zoom Meeting 22-04-2024 3 48 05 PM](https://github.com/SaurabhDadhe/dbt_notes/assets/103322970/90f17067-3e29-40f2-b793-a41dbd5b9a49)
+select dname, ename, dhead from emp,	dept,	depthead
+where depthead.deptno = dept.deptno
+and dept.deptno = emp.deptno;
+DNAME		ENAME		DHEAD
+
+
+
+Types of Relationships amongst tables:-
+1. 1 (Dept Depthead) or (Depthead Dept)
+1 : many (Dept Emp) and (Depthead Emp)
+Many : 1 (Emp Dept) and (Emp : Depthead)
+many : many (Emp Projects) or (Projects		Emp)
+
+select clientname, ename from projects_emp, emp, projects
+where projects. projno = projects_emp.projno
+and emp.empno = projects_emp. empno
+order by 1, 2;
 
